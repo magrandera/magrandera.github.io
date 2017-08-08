@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div id="blog-header" class="blog-header u-full-width" style="background: url({{page.image}});">
+    <div class="blog-title"><h2 id="title">Granderath</h2></div>
+</div>
+
+<div id="blog-posts" class="blog-posts">
+    <div class="container">
+        <div class="row" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="blog-sidebar three columns">
+            <img class="profile-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAd6AAAAJDIzNGFlMDEwLTFhOWUtNDY5ZS1hODE3LWQxMDQyM2NiZjJjNw.jpg"> 
+            <h6 style="margin-top: 15px">Malte <br> Granderath</h6>
+            <hr>
+            <p>Computer Science student at Jacobs University Bremen</p>
+            <hr>
+            <h6 style="margin-bottom: 5px;">Contact Me!</h6>
+            <div class="social-sidebar">
+            <a href="https://www.linkedin.com/in/malte-granderath/" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/magrandera" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            </div>
+        </div>
+        <div class="blog-posts-content-display nine columns">
+            <div class="post-display">
+            <h1>{{ page.title }}</h1>
+            <div class="date">
+             {{ page.date | date: "%B %e, %Y" }}
+            </div>
+
+            <div class="entry">
+              {{ content }}
+            </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+

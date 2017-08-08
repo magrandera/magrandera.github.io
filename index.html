@@ -1,0 +1,208 @@
+--- 
+layout: default 
+---
+
+<!-- Hero -->
+
+<section id="hero" class="hero u-full-width">
+ 
+    <div class="container centered">
+        <div class="twelve columns">
+            <h1 class="separator" id="title">Granderath</h1>
+            <h2>Computer Science student at Jacobs University Bremen</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction -->
+
+<section id="introduction" class="introduction u-full-width">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h3 class="separator" style="color: #7c25f8">About</h3>
+                <p>I am a first year at <a href="https://www.jacobs-university.de/" style="text-decoration: none; color: #7c25f8;">Jacobs University Bremen</a> and I'm pursuing a BSc in Computer Science. I was born near Cologne in Germany and attended an
+                    International School from 2008-2016.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="u-full-width experience">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h3 class="seperator">Experience</h3>
+                <p>I am currently working as a Full-Stack Webdeveloper. Below are the organizations I worked with.</p>
+                <div class="experience-section">
+                    <a id="experience-link-1" href="http://www.wirsind1991.de/" target="_blank">
+                        <div class="org">
+                            <img id="org-img-1" src="/images/1991-logo.png">
+                            <div class="org-description" id="org-description-1">
+                                <h4>Wirsind1991</h5>
+                                <h6>Full Stack Web developer</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a id="experience-link-2" href="#" target="_blank">
+                        <div class="org">
+                            <img id="org-img-2" src="/images/iss.jpg">
+                            <div class="org-description" id="org-description-2">
+                                <h4>ISS Facility Services</h5>
+                                <h6>IT Department</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="why u-full-width">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h3 class="separator">Projects</h3>
+                <p style="font-weight: bold;color: #9bf0e1;">These are some of my projects</p>
+                <div class="project-container">
+                    <div class="featured-projects">
+                        <a href="https://magrandera.github.io/" target="_blank" id="project-1">
+                            <div class="project-data">
+                                <img src="/images/personal_website.png" class="projectImage">
+                                <div class="project-description" id="project-description-1">
+                                    <h3>Personal Website</h3>
+                                    <p>Design and Development of my personal website your are browsing on right now</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Us -->
+
+<section class="container contact-us u-full-width u-max-full-width">
+    <div class="row">
+        <div class="twelve columns contact-container" style="height: 100%; min-height: 300px;">
+                <div class="contact-link-container">
+                    <p style="text-align: center;">Let's Connect!</p>
+                    <div class="social-container">
+                        <a href="https://www.linkedin.com/in/malte-granderath/" target="_blank">
+                            <i class="fa fa-linkedin social" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/magrandera" target="_blank">
+                            <i class="fa fa-github social" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+
+<section style="max-height: 100px; padding: 0; padding-top: 30px;" class="footer u-full-width">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <p>&copy Malte Granderath</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $('#experience-link-1').hover(function(){
+        var pos = $(this).position();
+
+        // .outerWidth() takes into account border and padding.
+        var width = $(this).outerWidth();
+
+        //show the menu directly over the placeholder
+        $("#org-description-1").css({
+            position: "absolute",
+            top: pos.top + "px",
+            left: 0,
+        }).show();
+    }, function(){
+        $("#org-description-1").css({
+            position:"",
+            top: 100+ "%",
+            left: 0,
+        })
+    });
+    $('#experience-link-2').hover(function(){
+        var pos = $(this).position();
+
+        // .outerWidth() takes into account border and padding.
+        var width = $(this).outerWidth();
+
+        //show the menu directly over the placeholder
+        $("#org-description-2").css({
+            position: "absolute",
+            top: pos.top + "px",
+            left: 0,
+        }).show();
+    }, function(){
+        $("#org-description-2").css({
+            position:"",
+            top: 100+ "%",
+            left: 0,
+        })
+    });
+    $('#project-1').hover(function(){
+        $('#project-description-1').css({
+            opacity: 0.75,
+        }).show();
+    },function(){
+        $('#project-description-1').css({
+            opacity: 0,
+        }).show();
+    });
+
+    $(document).ready(function(){
+        $("body").ezBgResize({
+            img : "images/hero_bg_image.jpg"
+        });
+        $("#introduction").waypoint(function(direction){
+            if(direction === 'down'){
+                $('#menu-button').removeClass("white-menu");
+                $('#menu-button').addClass("black-menu");
+            }else{
+                $('#menu-button').removeClass("black-menu");
+                $('#menu-button').addClass("white-menu");
+            }
+        });
+        $("#introduction").waypoint(function(direction){
+            if(direction === 'up'){
+                $('#menu-button').removeClass("white-menu");
+                $('#menu-button').addClass("black-menu");
+            }else{
+                 $('#menu-button').removeClass("black-menu");
+                $('#menu-button').addClass("white-menu");
+            }
+        }, {offset: -1*$("#introduction").outerHeight(true)});
+        $(".contact-us").waypoint(function(direction){
+            if(direction === 'down'){
+                $('#menu-button').removeClass("white-menu");
+                $('#menu-button').addClass("black-menu");
+            }else{
+                $('#menu-button').removeClass("black-menu");
+                $('#menu-button').addClass("white-menu");
+            }
+        });
+        $(".contact-us").waypoint(function(direction){
+            if(direction === 'up'){
+                $('#menu-button').removeClass("white-menu");
+                $('#menu-button').addClass("black-menu");
+            }else{
+                 $('#menu-button').removeClass("black-menu");
+                $('#menu-button').addClass("white-menu");
+            }
+        }, {offset: -1*$(".contact-us").outerHeight(true)});
+    });
+
+
+</script>
