@@ -36,28 +36,28 @@ layout: default
                 <p>During the Summer break I worked at <span style="text-decoration: none; color: #ff4169;">IBM Watson IoT</span> in Munich as a <span style="text-decoration: none; color: #ff4169;">Software Engineering Intern</span>. You can read more about my internship in my blog.</p>
                 <p>Below are the organizations I worked with.</p>
                 <div class="experience-section">
-                    <a id="experience-link-0" href="#" target="_blank">
+                    <a class="experience-link" href="#" target="_blank">
                         <div class="org">
-                            <img id="org-img-0" src="/images/IBM.png">
-                            <div class="org-description" id="org-description-0">
+                            <img src="/images/IBM.png">
+                            <div class="org-description">
                                 <h4>IBM Watson IoT</h4>
                                 <h6>Software Engineering Intern</h6>
                             </div>
                         </div>
                     </a>
-                    <a id="experience-link-1" href="http://www.wirsind1991.de/" target="_blank">
+                    <a class="experience-link" href="http://www.wirsind1991.de/" target="_blank">
                         <div class="org">
-                            <img id="org-img-1" src="/images/1991-logo.png">
-                            <div class="org-description" id="org-description-1">
+                            <img src="/images/1991-logo.png">
+                            <div class="org-description">
                                 <h4>Wirsind1991</h4>
                                 <h6>Full Stack Web developer</h6>
                             </div>
                         </div>
                     </a>
-                    <a id="experience-link-2" href="#" target="_blank">
+                    <a class="experience-link" href="#" target="_blank">
                         <div class="org">
-                            <img id="org-img-2" src="/images/iss.jpg">
-                            <div class="org-description" id="org-description-2">
+                            <img src="/images/iss.jpg">
+                            <div class="org-description">
                                 <h4>ISS Facility Services</h4>
                                 <h6>IT Department Intern</h6>
                             </div>
@@ -77,10 +77,10 @@ layout: default
                 <p style="font-weight: bold;color: #9bf0e1;">These are some of my projects</p>
                 <div class="project-container">
                     <div class="featured-projects">
-                        <a href="https://magrandera.github.io/" target="_blank" id="project-1">
+                        <a href="https://magrandera.github.io/" target="_blank" class="project">
                             <div class="project-data">
                                 <img src="/images/personal_website.png" class="projectImage">
-                                <div class="project-description" id="project-description-1">
+                                <div class="project-description">
                                     <h4>Personal Website</h4>
                                     <p>Design and Development of my personal website your are browsing on right now</p>
                                 </div>
@@ -111,84 +111,32 @@ layout: default
         </div>
     </div>
 </section>
-
-<!-- Footer -->
-
-<section style="max-height: 100px; padding: 0; padding-top: 30px;" class="footer u-full-width">
-    <div class="container">
-        <div class="row">
-            <div class="twelve columns">
-                <p>&copy Malte Granderath</p>
-            </div>
-        </div>
-    </div>
-</section>
 <script>
-      $('#experience-link-0').hover(function(){
+      $('.experience-link').hover(function(){
         var pos = $(this).position();
 
         // .outerWidth() takes into account border and padding.
         var width = $(this).outerWidth();
-
-        //show the menu directly over the placeholder
-        $("#org-description-0").css({
+        $(this).find('.org-description').css({
           position: "absolute",
           top: pos.top + "px",
-          left: 0,
+          left: 0
         }).show();
       }, function(){
-        $("#org-description-0").css({
+        $(this).find('.org-description').css({
           position:"",
           top: 100+ "%",
-          left: 0,
+          left: 0
         })
       });
-    $('#experience-link-1').hover(function(){
-        var pos = $(this).position();
-
-        // .outerWidth() takes into account border and padding.
-        var width = $(this).outerWidth();
-
-        //show the menu directly over the placeholder
-        $("#org-description-1").css({
-            position: "absolute",
-            top: pos.top + "px",
-            left: 0,
-        }).show();
-    }, function(){
-        $("#org-description-1").css({
-            position:"",
-            top: 100+ "%",
-            left: 0,
-        })
-    });
-    $('#experience-link-2').hover(function(){
-        var pos = $(this).position();
-
-        // .outerWidth() takes into account border and padding.
-        var width = $(this).outerWidth();
-
-        //show the menu directly over the placeholder
-        $("#org-description-2").css({
-            position: "absolute",
-            top: pos.top + "px",
-            left: 0,
-        }).show();
-    }, function(){
-        $("#org-description-2").css({
-            position:"",
-            top: 100+ "%",
-            left: 0,
-        })
-    });
-    $('#project-1').hover(function(){
-        $('#project-description-1').css({
-            opacity: 0.75,
+    $('.project').hover(function(){
+        $(this).find('.project-description').css({
+            opacity: 0.75
         }).show();
     },function(){
-        $('#project-description-1').css({
-            opacity: 0,
-        }).show();
+          $(this).find('.project-description').css({
+            opacity: 0
+          }).show();
     });
 
     $(document).ready(function(){

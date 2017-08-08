@@ -14,7 +14,12 @@ html {
 }
 
 ul {
-    list-style: none;
+  list-style: none;
+}
+
+.blog-posts-content-display ul {
+  list-style: circle;
+  padding-left: 20px;
 }
 
 a {
@@ -71,6 +76,7 @@ article {
     border-width: 3px;
     width: 75%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 article:hover {
@@ -99,6 +105,10 @@ article:hover {
 .article-content-excerpt p {
     color: #000;
     font-size: 1em;
+}
+
+.article-content-excerpt {
+  margin-bottom: 20px;
 }
 
 .post-image-container .post-image{
