@@ -33,14 +33,24 @@ layout: default
         <div class="row">
             <div class="twelve columns">
                 <h3 class="seperator">Experience</h3>
-                <p>I am currently working as a Full-Stack Webdeveloper. Below are the organizations I worked with.</p>
+                <p>During the Summer break I worked at <span style="text-decoration: none; color: #ff4169;">IBM Watson IoT</span> in Munich as a <span style="text-decoration: none; color: #ff4169;">Software Engineering Intern</span>. You can read more about my internship in my blog.</p>
+                <p>Below are the organizations I worked with.</p>
                 <div class="experience-section">
+                    <a id="experience-link-0" href="#" target="_blank">
+                        <div class="org">
+                            <img id="org-img-0" src="/images/IBM.png">
+                            <div class="org-description" id="org-description-0">
+                                <h4>IBM Watson IoT</h4>
+                                <h6>Software Engineering Intern</h6>
+                            </div>
+                        </div>
+                    </a>
                     <a id="experience-link-1" href="http://www.wirsind1991.de/" target="_blank">
                         <div class="org">
                             <img id="org-img-1" src="/images/1991-logo.png">
                             <div class="org-description" id="org-description-1">
-                                <h4>Wirsind1991</h5>
-                                <h6>Full Stack Web developer</h5>
+                                <h4>Wirsind1991</h4>
+                                <h6>Full Stack Web developer</h6>
                             </div>
                         </div>
                     </a>
@@ -48,8 +58,8 @@ layout: default
                         <div class="org">
                             <img id="org-img-2" src="/images/iss.jpg">
                             <div class="org-description" id="org-description-2">
-                                <h4>ISS Facility Services</h5>
-                                <h6>IT Department</h5>
+                                <h4>ISS Facility Services</h4>
+                                <h6>IT Department</h6>
                             </div>
                         </div>
                     </a>
@@ -114,6 +124,25 @@ layout: default
     </div>
 </section>
 <script>
+      $('#experience-link-0').hover(function(){
+        var pos = $(this).position();
+
+        // .outerWidth() takes into account border and padding.
+        var width = $(this).outerWidth();
+
+        //show the menu directly over the placeholder
+        $("#org-description-0").css({
+          position: "absolute",
+          top: pos.top + "px",
+          left: 0,
+        }).show();
+      }, function(){
+        $("#org-description-0").css({
+          position:"",
+          top: 100+ "%",
+          left: 0,
+        })
+      });
     $('#experience-link-1').hover(function(){
         var pos = $(this).position();
 
@@ -183,7 +212,7 @@ layout: default
                  $('#menu-button').removeClass("black-menu");
                 $('#menu-button').addClass("white-menu");
             }
-        }, {offset: -1*$("#introduction").outerHeight(true)});
+        }, {offset: -0.7*$("#introduction").outerHeight(true)});
         $(".contact-us").waypoint(function(direction){
             if(direction === 'down'){
                 $('#menu-button').removeClass("white-menu");
