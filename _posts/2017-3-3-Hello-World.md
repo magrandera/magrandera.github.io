@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-image: "/images/creativity_bg_image.jpg"
+image: "/images/posts/hello-world.jpg"
 ---
 
 **Hey**, I just setup this blog to post about anything that interests me and has to do with Computer Science.

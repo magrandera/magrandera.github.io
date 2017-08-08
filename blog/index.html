@@ -10,7 +10,7 @@ title: Blog
         <div class="row" style="padding-top: 50px; padding-bottom: 50px;">
         <div class="blog-sidebar three columns">
             <img class="profile-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAd6AAAAJDIzNGFlMDEwLTFhOWUtNDY5ZS1hODE3LWQxMDQyM2NiZjJjNw.jpg"> 
-            <h6 style="margin-top: 15px">Malte <br> Granderath</h6>
+            <h6 style="margin-top: 15px">Malte Granderath</h6>
             <hr>
             <p>Computer Science student at Jacobs University Bremen</p>
             <hr>
@@ -35,7 +35,7 @@ title: Blog
             {% for post in paginator.posts %}
             <article class="post">
                 <div class="post-image-container">
-                    <a href="{{ post.url }}" ><img class="post-image" src="{{ post.image }}" />
+                    <a href="{{ post.url }}" ><img class="post-image" src="{{ post.image }}" /></a>
                 </div>
                 <div class="article-content">
                     <p class="date">

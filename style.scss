@@ -393,6 +393,10 @@ article:hover {
     transition: all .5s cubic-bezier(.215,.61,.355,1);
 }
 
+.project-description > p {
+  font-size: 0.8em;
+}
+
 .project-data:hover .project-description {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -428,10 +432,24 @@ article:hover {
     .pagination {
         width: 100%;
     }
+
     .profile-image {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .blog-posts, .blog-posts-content, .blog-posts-content-display, .blog-sidebar {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .profile-image {
+      display: none;
+    }
+
     article {
         width: 100%;
     }
@@ -460,6 +478,16 @@ article:hover {
     .blog-sidebar{
         text-align: center;
         padding-bottom: 20px;
+    }
+    .blog-posts, .blog-posts-content, .blog-posts-content-display, .blog-sidebar {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    .profile-image {
+      display: none;
     }
     .pagination {
         width: 100%;
