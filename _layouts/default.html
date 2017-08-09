@@ -42,8 +42,8 @@
   -------------------------------------------------- -->
 
   <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.waypoints.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.ez-bg-resize.js"></script>
+  <script async type="text/javascript" src="{{ site.baseurl }}/js/jquery.waypoints.js"></script>
+  <script async type="text/javascript" src="{{ site.baseurl }}/js/jquery.ez-bg-resize.js"></script>
 </head>
 <body>
 
@@ -73,9 +73,9 @@
     </div>
 </section>
 <script>
-$(document).ready(function() {
+window.onload = function() {
     $('body').addClass('loaded');
-});
+};
 /* Open the sidenav */
 function openNav() {
     $('#mySidenav').css({

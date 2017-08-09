@@ -19,25 +19,26 @@ The developers and younger team members usually used Slack, because of the many 
 This meant to contact someone you always had to try several communication channels and therefore spent quite a lot of time on a simple message.
 
 The main issue tracking tool we were using was ZenHub, but many of the non technical employees did not even use Github so
-we got issues or enhancements via E-mail. This meant another decrease in efficiency of the developers.
+we got issues or enhancements via E-mail. This meant another decrease in efficiency of the developers. Many different deployment
+methods were used. Since Bluemix is backed by Cloud Foundry many people just chose to directly push to the platform without
+any pipeline or Version Control.
 
-#### Development Pipeline ####
+#### Proper Development Workflow ####
 
-The preferred platform of use was, of course, IBM Bluemix. For deployment the Bluemix Platform was backed by Cloud Foundry,
-so many of the Consultants, that had no real education or experience in development, just directly deployed to Bluemix without a proper pipeline
-or Version Control. I took over a project from a previous student intern, that had not written any documentation nor used Version Control.
-The basic formatting guidelines were not followed so I received a zip file of a Node Js project containing 2 main files: a 750 lines of server routing,
-and 1800 lines of pure javascript frontend with jQuery.
+After all, maybe having this disorganization was not at all a bad thing for me. I tried to solve this problem, at least for my projects,
+and therefore came across many principles of DevOps and Team Projects. I looked more into deployment strategies and spent a couple of days to
+setup a proper pipeline.
 
-I did not bother to refactor the code but rather started to write my own solution. Through this I gained more skills in Node Js, MySQL and several frontend
-frameworks. For the final solution I decided to use the Vue.js framework for the frontend, and, what else, Express for the backend. For deployment I used the
-Bluemix DevOps Pipeline which cloned the git repository, ran the tests, I had written, and only if every one of the passed did a
-[blue-green deploy](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html). This allowed for 0 downtime on a new deploy. The users would not even realize.
-
-During my time I did some smaller workshops about this setup and tried to make the non-technical users appreciate the Git and Pipeline workflow.
+Here are the main steps:
+1. Clone git repository
+2. Build the artifacts
+3. Run unit tests (results sent for analysis)
+4. Run code style test (results sent for analysis)
+5. Smart Gate (decides whether to deploy or not, based on test results and general commit quality)
+6. [Blue-green deploy](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html) for zero downtime
 
 #### Generalized Projects ####
-- Watson IoT and connected office (python & C++)
+- IoT and Insurance (python & C++)
 - Machine Learning for data classification (python)
 - Internal Tool (Full Stack)
 

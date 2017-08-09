@@ -112,34 +112,7 @@ layout: default
     </div>
 </section>
 <script>
-      $('.experience-link').hover(function(){
-        var pos = $(this).position();
-
-        // .outerWidth() takes into account border and padding.
-        var width = $(this).outerWidth();
-        $(this).find('.org-description').css({
-          position: "absolute",
-          top: pos.top + "px",
-          left: 0
-        }).show();
-      }, function(){
-        $(this).find('.org-description').css({
-          position:"",
-          top: 100+ "%",
-          left: 0
-        })
-      });
-    $('.project').hover(function(){
-        $(this).find('.project-description').css({
-            opacity: 0.75
-        }).show();
-    },function(){
-          $(this).find('.project-description').css({
-            opacity: 0
-          }).show();
-    });
-
-    $(document).ready(function(){
+  $(document).ready(function(){
         $("body").ezBgResize({
             img : "images/hero_bg_image.jpg"
         });
@@ -179,6 +152,30 @@ layout: default
                 $('#menu-button').addClass("white-menu");
             }
         }, {offset: -1*$(".contact-us").outerHeight(true)});
+      $('.experience-link').hover(function(){
+        var pos = $(this).position();
+        var width = $(this).outerWidth();
+        $(this).find('.org-description').css({
+          position: "absolute",
+          top: pos.top + "px",
+          left: 0
+        }).show();
+      }, function(){
+        $(this).find('.org-description').css({
+          position:"",
+          top: 100+ "%",
+          left: 0
+        })
+      });
+      $('.project').hover(function(){
+        $(this).find('.project-description').css({
+          opacity: 0.75
+        }).show();
+      },function(){
+        $(this).find('.project-description').css({
+          opacity: 0
+        }).show();
+      });
     });
 
 
