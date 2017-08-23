@@ -38,8 +38,10 @@ Here are the main steps:
 6. [Blue-green deploy](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html) for zero downtime
 
 #### Generalized Projects ####
-- IoT and Insurance (python & C++)
-- Machine Learning for data classification (python)
+
+- IoT and Insurance (Python & C++)
+- Machine Learning for data classification (Python)
 - Internal Tool (Full Stack)
+- Blockchain (Hyperledger Fabric)
 
 I am glad that I had this opportunity and thank every one of the people that supported me.
